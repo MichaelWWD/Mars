@@ -2,11 +2,13 @@ import requests
 
 BASE_URL = 'https://swapi.dev/api'
 
-all_people_response = requests.get(url=f'{BASE_URL}/people/').json()
-print(all_people_response)
+def get_all_people():
+    response = requests.get(url=f'{BASE_URL}/people/')
+    return response.json()
 
-star_ships_schema = requests.get(url=f'{BASE_URL}/starships/schema').json()
-print(star_ships_schema)
+def get_star_ships_schema():
+    return requests.get(url=f'{BASE_URL}/starships/schema').json
 
-first_star_ship = requests.get(url=f'{BASE_URL}/starships/1').json()
-print(first_star_ship)
+def get_first_star_ship():
+    return requests.get(url=f'{BASE_URL}/starships/1').json()
+
