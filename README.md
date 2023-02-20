@@ -1,3 +1,2 @@
 # Mars
-A new line of code
-another new line of code
+This repo is a practice repo for git workflow and web scraping with python
